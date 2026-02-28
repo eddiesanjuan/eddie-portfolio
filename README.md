@@ -1,6 +1,6 @@
 # Eddie San Juan — Portfolio
 
-Personal portfolio site for Eddie San Juan, CEO of E.F. San Juan Inc.
+Personal portfolio site for Eddie San Juan, E.F. San Juan Inc.
 
 Built with Next.js 16, Tailwind CSS 4, Framer Motion, and TypeScript.
 

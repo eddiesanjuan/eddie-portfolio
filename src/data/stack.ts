@@ -17,7 +17,7 @@ export const stackSections: StackSection[] = [
     id: 'erp-backbone',
     title: 'Custom ERP: The Backbone',
     description:
-      'Every system we build plugs into the ERP. It\'s not a module — it\'s the foundation. VoxShop reads from it. CNC Validator writes to it. Craft Brain enriches it. AI Estimating feeds it. The ERP is the single source of truth for the entire operation.',
+      'Every system we build plugs into the ERP. It\'s not a module — it\'s the foundation. VoxShop reads from it. CNC Validator writes to it. Craft Brain enriches it. The ERP is the single source of truth for the entire operation.',
     items: [
       {
         title: 'Work Order Lifecycle',
@@ -40,7 +40,7 @@ export const stackSections: StackSection[] = [
           'VoxShop: Voice AI on the shop floor (reads ERP data)',
           'CNC Validator: G-code linting (writes results to ERP)',
           'Craft Brain: Knowledge engine (enriches ERP decisions)',
-          'AI Estimating: Architectural PDF analysis (feeds ERP)',
+          'Estimating workflows: Structured pricing with historical data',
           'Work Order Validation: Completeness checks before production',
         ],
         icon: 'ai',

@@ -44,7 +44,7 @@ export default function Home() {
 
           <FadeIn delay={0.35}>
             <p className="mt-8 text-lg md:text-xl text-muted max-w-2xl leading-relaxed">
-              CEO of E.F. San Juan Inc. I build AI systems, custom software, and
+              E.F. San Juan Inc. I build AI systems, custom software, and
               automation infrastructure for a company where the product is still
               made by human hands.
             </p>
@@ -162,9 +162,9 @@ export default function Home() {
           <FadeIn delay={0.2}>
             <p className="mt-6 text-muted max-w-2xl leading-relaxed">
               A full custom ERP with AI helpers integrated into every department.
-              Not an off-the-shelf system bent into shape. Built by Eddie San Juan
-              and developer Nick Akins — because nobody else makes software for a
-              company where every product is a prototype.
+              Not an off-the-shelf system bent into shape. Built in-house — because
+              nobody else makes software for a company where every product is a
+              prototype.
             </p>
           </FadeIn>
 

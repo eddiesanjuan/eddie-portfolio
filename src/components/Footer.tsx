@@ -8,7 +8,7 @@ export default function Footer() {
           <div>
             <p className="font-mono text-sm text-muted tracking-wider">Eddie San Juan</p>
             <p className="text-sm text-muted mt-1">
-              CEO, E.F. San Juan Inc.
+              E.F. San Juan Inc.
             </p>
           </div>
           <div className="flex gap-12">

@@ -19,7 +19,7 @@ export default function CaseStudiesPage() {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight max-w-4xl">
             One custom ERP.
             <br />
-            <span className="text-muted">Four integrated AI systems.</span>
+            <span className="text-muted">Three integrated AI systems.</span>
           </h1>
         </FadeIn>
         <FadeIn delay={0.2}>

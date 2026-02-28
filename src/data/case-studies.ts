@@ -37,7 +37,7 @@ export const caseStudies: CaseStudy[] = [
       'Airtable base hitting row limits and grinding to a halt under real load',
       'Project managers spending 40% of their time on data entry instead of managing projects',
       'No real-time visibility — "Where is this job?" required a phone call chain',
-      'Estimating required senior staff with 20+ years of experience and 1-2 weeks per project',
+      'Estimating bottlenecked on senior staff with 20+ years of experience',
       'Every department had its own system — none of them talked to each other',
       'Tribal knowledge walked out the door every time someone retired',
     ],
@@ -46,7 +46,7 @@ export const caseStudies: CaseStudy[] = [
       'Custom ERP on Supabase with role-based access for every department',
       'Automated data flow: one entry in sales cascades through engineering, production, finishing, and delivery',
       'Live dashboards showing every project\'s status, every piece\'s location, every department\'s workload',
-      'AI-assisted estimating that reads architectural drawings and learns from 50 years of historical data',
+      'Structured data flows that reduce manual entry across every department',
       'Integrated AI helpers at every decision point — not bolted on, woven in',
       'Every piece of lumber tracked from arrival at the shop to installation on the job site',
     ],
@@ -63,15 +63,15 @@ export const caseStudies: CaseStudy[] = [
     status: 'live',
     featured: true,
     vision:
-      'Replace Airtable entirely with a fully custom ERP designed for custom manufacturing. Not an off-the-shelf system bent into shape. Not a SaaS product that handles 80% of what we need. A system that handles 100% — because we built every screen, every workflow, every integration ourselves. This is a CEO personally architecting his company\'s entire technology stack, not hiring consultants or buying enterprise software. Every line of code exists because it solves a real problem on our shop floor.',
+      'Replace Airtable entirely with a fully custom ERP designed for custom manufacturing. Not an off-the-shelf system bent into shape. Not a SaaS product that handles 80% of what we need. A system that handles 100% — because we built every screen, every workflow, every integration ourselves. Every line of code exists because it solves a real problem on our shop floor.',
     scope: [
       {
         department: 'Sales / CRM',
-        description: 'Lead tracking, client relationships, bid management. Todd Oliver drives the CRM requirements — the system knows every interaction, every preference, every project history for every client.',
+        description: 'Lead tracking, client relationships, bid management. The system knows every interaction, every preference, every project history for every client.',
       },
       {
         department: 'Estimating',
-        description: 'AI-powered takeoffs from architectural drawings. What used to take our best estimators 2 weeks now gets a first pass in minutes. Human review still required — AI handles the complexity, humans handle the judgment.',
+        description: 'Structured estimating workflows that capture decades of pricing knowledge. The system standardizes takeoffs and guides estimators through complex projects with historical data at their fingertips.',
       },
       {
         department: 'Engineering',
@@ -83,7 +83,7 @@ export const caseStudies: CaseStudy[] = [
       },
       {
         department: 'CNC / Machine Shop',
-        description: 'Automated G-code validation before any material gets cut. Trey Carr drives the CNC requirements. The CNC Validator catches the $10,000 mistakes before they happen.',
+        description: 'Automated G-code validation before any material gets cut. The CNC Validator catches the $10,000 mistakes before they happen.',
       },
       {
         department: 'Procurement',
@@ -104,8 +104,8 @@ export const caseStudies: CaseStudy[] = [
         description: 'Craftsmen ask questions by voice without leaving their station. "What\'s the finish spec for the Riverside master bath vanity?" Answers in 2 seconds from work orders, specs, and material databases. Built in Rust for speed.',
       },
       {
-        name: 'AI-Powered Estimating',
-        description: 'Reads architectural PDFs, extracts millwork scope, calculates material and labor costs from 50 years of historical project data. Turns a 2-week process into a 4-minute first pass.',
+        name: 'Estimating Workflow Engine',
+        description: 'Structured estimating workflows with historical pricing data, standardized takeoffs, and guided complexity scoring. Makes the estimating process repeatable and trainable.',
       },
       {
         name: 'CNC Validator — Automated G-code Linting',
@@ -125,11 +125,11 @@ export const caseStudies: CaseStudy[] = [
       },
     ],
     team: [
-      { name: 'Eddie San Juan', role: 'System architect, product owner, CEO. Designs the workflows, writes the specs, reviews every deployment.' },
-      { name: 'Nick Akins', role: 'Lead developer. Builds the application layer — frontend, API, database design, deployment pipeline.' },
-      { name: 'Andrew Shelley', role: 'Testing and training lead. Makes sure the system works for real people on a real shop floor, not just in a demo.' },
-      { name: 'Todd Oliver', role: 'Sales/CRM requirements. Drives the client-facing side of the system — what sales needs to close deals faster.' },
-      { name: 'Trey Carr', role: 'CNC and machine shop requirements. Ensures the CNC validation and machine integration actually works the way operators need it to.' },
+      { name: 'Eddie San Juan', role: 'System architect and product owner. Designs the workflows, writes the specs, reviews every deployment.' },
+      { name: 'In-house developer', role: 'Builds the application layer — frontend, API, database design, deployment pipeline.' },
+      { name: 'Testing & training lead', role: 'Makes sure the system works for real people on a real shop floor, not just in a demo.' },
+      { name: 'Sales team', role: 'Drives CRM requirements — what sales needs to close deals faster.' },
+      { name: 'CNC & machine shop team', role: 'Ensures CNC validation and machine integration actually works the way operators need it to.' },
     ],
     whyCustom: [
       'Every job in custom millwork is unique — different dimensions, species, joinery, finishes. ERP systems built for widget manufacturing can\'t handle "every product is a prototype."',
@@ -240,38 +240,5 @@ export const caseStudies: CaseStudy[] = [
     techStack: ['RAG pipeline', 'Supabase pgvector', 'Claude API', 'Structured interviews', 'Custom embeddings'],
     quote: 'We\'re not replacing craftsmen. We\'re making sure what they know never gets lost.',
     status: 'in-progress',
-  },
-  {
-    slug: 'ai-estimating',
-    title: 'From 2-Week Estimates to 4 Minutes',
-    subtitle: 'AI that reads architectural drawings and produces accurate estimates in minutes, not weeks.',
-    category: 'Business Intelligence',
-    year: '2026',
-    heroStat: { value: '4 min', label: 'Target estimate time' },
-    problem:
-      'Custom millwork estimation is brutally complex. Every project is unique. An estimator needs to read architectural drawings, understand material requirements, calculate labor hours across a dozen departments, account for finishing and hardware, and produce a number the business can stand behind. It currently takes our best estimators 1-2 weeks per project.',
-    oldWay: [
-      'Manual takeoff from architectural drawings (hours per project)',
-      'Estimators needed 10+ years of experience to be accurate',
-      'Only 2-3 people in the company could estimate complex projects',
-      'Bottleneck limited how many bids we could pursue',
-      'Inconsistent pricing across estimators',
-    ],
-    newWay: [
-      'AI reads architectural PDFs and extracts millwork scope',
-      'Historical project data trains the pricing model',
-      'Automated material takeoff with species and grade detection',
-      'Labor estimation by department based on complexity scoring',
-      'Human review of AI estimate for final approval',
-    ],
-    impact: [
-      { metric: '99% faster estimates', description: 'From 2 weeks to 4 minutes for initial pricing' },
-      { metric: '5x more bids', description: 'Capacity to pursue every viable project' },
-      { metric: 'Consistent pricing', description: 'Same project gets the same price regardless of who estimates' },
-      { metric: 'Junior estimator enablement', description: 'AI handles complexity, humans handle relationships' },
-    ],
-    techStack: ['Vision AI', 'Claude API', 'Historical data pipeline', 'Custom pricing engine', 'PDF extraction'],
-    quote: 'The goal isn\'t to remove the estimator. It\'s to give them superpowers.',
-    status: 'planned',
   },
 ];

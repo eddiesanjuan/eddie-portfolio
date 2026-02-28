@@ -44,7 +44,7 @@ const timeline = [
     year: '2026',
     title: 'What comes next',
     description:
-      'AI-powered estimating from architectural drawings. Autonomous CNC programming. The goal: 10x the capacity without losing an ounce of craft.',
+      'Autonomous CNC programming. Deeper knowledge capture. The goal: 10x the capacity without losing an ounce of craft.',
   },
 ];
 
@@ -63,7 +63,7 @@ export default function AboutPage() {
         </FadeIn>
         <FadeIn delay={0.2}>
           <p className="mt-4 text-xl text-muted max-w-2xl leading-relaxed">
-            Third-generation CEO of E.F. San Juan Inc.
+            Third-generation leader of E.F. San Juan Inc.
             <br />
             Building AI systems for a company that builds things by hand.
           </p>
@@ -113,8 +113,8 @@ export default function AboutPage() {
               </p>
               <p>
                 Everything on this site, I built. The AI agents, the ERP, the
-                shop floor voice assistant, the CNC validator. Some of it with
-                my developer Nick Akins. None of it with consultants.
+                shop floor voice assistant, the CNC validator. All of it with
+                an in-house development team. None of it with consultants.
               </p>
             </div>
           </FadeIn>
@@ -137,7 +137,7 @@ export default function AboutPage() {
             <div className="p-6 rounded-xl border border-border bg-card h-full">
               <div className="flex items-center gap-2 mb-4">
                 <div className="w-2 h-2 rounded-full bg-accent" />
-                <span className="text-sm font-mono text-accent">CEO</span>
+                <span className="text-sm font-mono text-accent">Operator</span>
               </div>
               <h3 className="text-lg font-semibold mb-3">
                 Running the Company

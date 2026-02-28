@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: 'Eddie San Juan — Building the Future of Custom Manufacturing',
   description:
-    'CEO of E.F. San Juan Inc. Transforming a 50-year-old custom millwork company into the most technologically advanced manufacturer in the country.',
+    'Eddie San Juan, E.F. San Juan Inc. Transforming a 50-year-old custom millwork company into the most technologically advanced manufacturer in the country.',
   openGraph: {
     title: 'Eddie San Juan — Building the Future of Custom Manufacturing',
     description:
