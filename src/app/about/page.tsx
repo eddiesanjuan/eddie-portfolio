@@ -8,7 +8,7 @@ const timeline = [
     year: '1976',
     title: 'E.F. San Juan founded',
     description:
-      'My grandfather started a custom millwork shop in San Antonio, Texas. Hand tools, local projects, one truck.',
+      'My grandfather started a custom millwork shop in Santa Rosa Beach, Florida. Hand tools, local projects, one truck.',
   },
   {
     year: '2000s',
@@ -87,7 +87,7 @@ export default function AboutPage() {
           <FadeIn delay={0.1}>
             <div className="space-y-6 text-muted leading-relaxed">
               <p>
-                I run a 50-year-old custom millwork company in San Antonio, Texas.
+                I run a 50-year-old custom millwork company in Santa Rosa Beach, Florida.
                 We build the kind of woodwork you find in luxury homes and
                 high-end commercial spaces: custom staircases, radius moldings,
                 architectural panels, hand-finished cabinetry.
@@ -280,7 +280,7 @@ export default function AboutPage() {
                 <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
                 <circle cx="12" cy="10" r="3" />
               </svg>
-              San Antonio, Texas
+              Santa Rosa Beach, Florida
             </div>
           </div>
         </FadeIn>
