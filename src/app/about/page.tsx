@@ -75,12 +75,12 @@ export default function AboutPage() {
         <div className="grid md:grid-cols-[1fr_2fr] gap-12">
           {/* Photo placeholder */}
           <FadeIn>
-            <div className="aspect-[3/4] rounded-xl border border-border bg-card flex items-center justify-center overflow-hidden relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-accent/10 to-transparent" />
-              <div className="relative text-center px-4">
-                <p className="text-4xl font-bold gradient-text">ESJ</p>
-                <p className="text-xs text-muted mt-2 font-mono">Photo placeholder</p>
-              </div>
+            <div className="aspect-[3/4] rounded-xl border border-border bg-card overflow-hidden relative">
+              <img
+                src="/eddie-headshot.jpg"
+                alt="Eddie San Juan"
+                className="w-full h-full object-cover"
+              />
             </div>
           </FadeIn>
 
