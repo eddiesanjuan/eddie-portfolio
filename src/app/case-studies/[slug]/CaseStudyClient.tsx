@@ -10,6 +10,21 @@ interface CaseStudyClientProps {
   study: CaseStudy;
 }
 
+function StatusBadge({ status }: { status: CaseStudy['status'] }) {
+  const config = {
+    live: { label: 'LIVE', bg: 'bg-green-500/10', text: 'text-green-400', dot: 'bg-green-500' },
+    'in-progress': { label: 'IN PROGRESS', bg: 'bg-amber-500/10', text: 'text-amber-400', dot: 'bg-amber-500' },
+    planned: { label: 'PLANNED', bg: 'bg-blue-500/10', text: 'text-blue-400', dot: 'bg-blue-500' },
+  };
+  const c = config[status];
+  return (
+    <span className={`inline-flex items-center gap-1.5 text-xs font-mono px-2.5 py-1 rounded-full ${c.bg} ${c.text}`}>
+      <span className={`w-1.5 h-1.5 rounded-full ${c.dot}`} />
+      {c.label}
+    </span>
+  );
+}
+
 export default function CaseStudyClient({ study }: CaseStudyClientProps) {
   const currentIndex = caseStudies.findIndex((s) => s.slug === study.slug);
   const nextStudy = caseStudies[(currentIndex + 1) % caseStudies.length];
@@ -41,15 +56,11 @@ export default function CaseStudyClient({ study }: CaseStudyClientProps) {
         </FadeIn>
 
         <FadeIn delay={0.1}>
-          <div className="flex items-center gap-3 mb-4">
+          <div className="flex items-center gap-3 mb-4 flex-wrap">
             <span className="text-xs font-mono text-accent">{study.category}</span>
             <span className="text-xs text-muted/40">/</span>
             <span className="text-xs text-muted/60">{study.year}</span>
-            {study.status !== 'live' && (
-              <span className="text-xs font-mono px-2 py-0.5 rounded-full bg-accent/10 text-accent">
-                {study.status}
-              </span>
-            )}
+            <StatusBadge status={study.status} />
           </div>
         </FadeIn>
 
@@ -65,14 +76,34 @@ export default function CaseStudyClient({ study }: CaseStudyClientProps) {
           </p>
         </FadeIn>
 
-        {/* Hero stat */}
+        {/* Hero stats */}
         <FadeIn delay={0.3}>
-          <div className="mt-10 p-6 rounded-xl border border-border bg-card inline-block">
-            <p className="text-4xl md:text-5xl font-bold gradient-text">
-              {study.heroStat.value}
-            </p>
-            <p className="text-sm text-muted mt-1">{study.heroStat.label}</p>
-          </div>
+          {study.heroStats && study.heroStats.length > 0 ? (
+            <div className="mt-10 flex flex-wrap gap-4">
+              {study.heroStats.map((stat, i) => (
+                <motion.div
+                  key={stat.label}
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.3 + i * 0.08 }}
+                  className="p-6 rounded-xl border border-border bg-card"
+                >
+                  <p className="text-3xl md:text-4xl font-bold gradient-text">
+                    {stat.value}
+                  </p>
+                  <p className="text-sm text-muted mt-1">{stat.label}</p>
+                </motion.div>
+              ))}
+            </div>
+          ) : (
+            <div className="mt-10 p-6 rounded-xl border border-border bg-card inline-block">
+              <p className="text-4xl md:text-5xl font-bold gradient-text">
+                {study.heroStat.value}
+              </p>
+              <p className="text-sm text-muted mt-1">{study.heroStat.label}</p>
+            </div>
+          )}
         </FadeIn>
       </div>
 

@@ -8,9 +8,31 @@ import { caseStudies } from '@/data/case-studies';
 
 const stats = [
   { value: '50', suffix: ' yrs', label: 'of craftsmanship' },
-  { value: '10', suffix: '+', label: 'AI agents deployed' },
-  { value: '80', suffix: '+', label: 'automated workflows' },
-  { value: '0', suffix: '', label: 'buzzwords used' },
+  { value: '16', suffix: '+', label: 'production tools deployed' },
+  { value: '12', suffix: '', label: 'AI-integrated systems' },
+  { value: '1', suffix: '', label: 'connected brain' },
+];
+
+const erpStudy = caseStudies.find((s) => s.featured);
+const systemStudies = caseStudies.filter((s) => !s.featured);
+
+const connectedBrainFlows = [
+  {
+    trigger: 'When the Pricing Engine updates a cost,',
+    result: 'the Takeoff system knows.',
+  },
+  {
+    trigger: 'When DocIntake extracts a specification,',
+    result: 'Engineering can see it.',
+  },
+  {
+    trigger: 'When Timber detects a price movement,',
+    result: 'Procurement gets alerted.',
+  },
+  {
+    trigger: 'When a work order is created,',
+    result: 'every downstream system is ready.',
+  },
 ];
 
 export default function Home() {
@@ -32,21 +54,19 @@ export default function Home() {
           </FadeIn>
 
           <FadeIn delay={0.2}>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight max-w-4xl">
-              Turning a 50-year-old
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight max-w-5xl">
+              What happens when a{' '}
+              <span className="gradient-text">50-year-old manufacturer</span>
               <br />
-              millwork shop into the{' '}
-              <span className="gradient-text">most advanced</span>
-              <br />
-              manufacturer in the country.
+              decides to build the future.
             </h1>
           </FadeIn>
 
           <FadeIn delay={0.35}>
             <p className="mt-8 text-lg md:text-xl text-muted max-w-2xl leading-relaxed">
-              E.F. San Juan Inc. I build AI systems, custom software, and
-              automation infrastructure for a company where the product is still
-              made by human hands.
+              E.F. San Juan has been building luxury custom millwork since 1976.
+              Now every department — from the shop floor to the front office — runs
+              on custom AI systems built from the ground up.
             </p>
           </FadeIn>
 
@@ -56,7 +76,7 @@ export default function Home() {
                 href="/case-studies"
                 className="inline-flex items-center justify-center px-6 py-3 bg-foreground text-background font-medium text-sm rounded-lg hover:opacity-90 transition-opacity"
               >
-                See the work
+                See the systems
                 <svg
                   className="ml-2 w-4 h-4"
                   fill="none"
@@ -75,7 +95,7 @@ export default function Home() {
                 href="/stack"
                 className="inline-flex items-center justify-center px-6 py-3 border border-border text-foreground font-medium text-sm rounded-lg hover:bg-card transition-colors"
               >
-                How I built it
+                How it&apos;s built
               </Link>
             </div>
           </FadeIn>
@@ -112,34 +132,50 @@ export default function Home() {
         </div>
       </section>
 
-      {/* The story */}
+      {/* The Transformation Story */}
       <section className="py-24 md:py-32">
         <div className="mx-auto max-w-6xl px-6">
           <FadeIn>
-            <SectionLabel label="The story" />
+            <SectionLabel label="The transformation" />
           </FadeIn>
           <FadeIn delay={0.1}>
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight max-w-3xl">
-              My family has been building custom millwork for five decades. I&apos;m making sure we build it for five more.
+              Every piece is unique. No two jobs are alike.
+              <br />
+              <span className="text-muted">For 50 years, the knowledge lived in people&apos;s heads.</span>
             </h2>
           </FadeIn>
           <div className="mt-10 grid md:grid-cols-2 gap-12">
             <FadeIn delay={0.2}>
-              <p className="text-muted leading-relaxed">
-                E.F. San Juan builds the millwork you see in luxury homes, high-end
-                commercial spaces, and architectural projects where &quot;good enough&quot;
-                doesn&apos;t exist. Custom staircases, radius moldings, hand-finished
-                cabinetry — the kind of work that still requires master craftsmen.
-              </p>
+              <div className="space-y-6">
+                <p className="text-muted leading-relaxed">
+                  E.F. San Juan is a luxury custom millwork manufacturer. Custom
+                  staircases, radius moldings, hand-finished cabinetry — the kind of
+                  work that still requires master craftsmen. Every project is a
+                  prototype. The institutional knowledge lived in people&apos;s heads,
+                  the processes lived on paper, and the data lived in spreadsheets.
+                </p>
+                <p className="text-muted leading-relaxed">
+                  Estimating took weeks. Shop floor workers hunted across three
+                  disconnected systems. Project managers spent more time on data entry
+                  than managing projects. When a senior craftsman retired, decades of
+                  hard-won knowledge walked out the door.
+                </p>
+              </div>
             </FadeIn>
             <FadeIn delay={0.3}>
-              <p className="text-muted leading-relaxed">
-                But the industry is changing. The craftsmen who built this company
-                are retiring. The complexity is increasing. The margins are
-                thinning. So I&apos;m building the systems that let us keep doing
-                exceptional work — AI that amplifies human skill instead of
-                replacing it.
-              </p>
+              <div className="space-y-6">
+                <p className="text-muted leading-relaxed">
+                  In 2025, that changed. Not with consultants. Not with enterprise
+                  software. Senior leadership started building. Custom tools for every department.
+                  AI integrations that actually understand millwork. An ERP designed
+                  from first principles for custom manufacturing.
+                </p>
+                <p className="text-foreground leading-relaxed font-medium">
+                  The result: 16 production tools. 12 AI-integrated systems. One
+                  connected intelligence that gets smarter with every job.
+                </p>
+              </div>
             </FadeIn>
           </div>
         </div>
@@ -150,73 +186,77 @@ export default function Home() {
         <div className="absolute inset-0 grid-bg opacity-15" />
         <div className="relative z-10 mx-auto max-w-6xl px-6">
           <FadeIn>
-            <SectionLabel label="The Centerpiece" />
+            <SectionLabel label="The centerpiece" />
           </FadeIn>
           <FadeIn delay={0.1}>
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight max-w-3xl">
-              We&apos;re building the operating system
+              The operating system
               <br />
-              <span className="gradient-text">for modern manufacturing.</span>
+              <span className="gradient-text">for custom manufacturing.</span>
             </h2>
           </FadeIn>
           <FadeIn delay={0.2}>
             <p className="mt-6 text-muted max-w-2xl leading-relaxed">
-              A full custom ERP with AI helpers integrated into every department.
-              Not an off-the-shelf system bent into shape. Built in-house — because
-              nobody else makes software for a company where every product is a
-              prototype.
+              A full custom ERP built from first principles — because nobody makes
+              software for a company where every product is a prototype. Not
+              off-the-shelf. Not bent into shape. Built in-house, department by
+              department, workflow by workflow.
             </p>
           </FadeIn>
 
-          <FadeIn delay={0.3}>
-            <Link href="/case-studies/ai-powered-erp">
-              <div className="mt-10 p-6 md:p-8 rounded-xl border border-accent/30 bg-card hover:bg-card-hover transition-all duration-300 group cursor-pointer">
-                <div className="flex items-center gap-2 mb-6">
-                  <span className="text-xs font-mono text-accent">Full Custom ERP</span>
-                  <span className="text-xs text-muted/40">/</span>
-                  <span className="text-xs text-muted/60">8 departments</span>
-                  <span className="text-xs text-muted/40">/</span>
-                  <span className="text-xs text-muted/60">6 AI integrations</span>
-                </div>
-
-                {/* Department grid */}
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
-                  {['Sales/CRM', 'Estimating', 'Engineering', 'Production', 'CNC', 'Procurement', 'Finishing', 'Delivery'].map((dept) => (
-                    <div key={dept} className="px-3 py-2 rounded-lg border border-border bg-background/50 text-center">
-                      <span className="text-xs font-mono text-muted">{dept}</span>
-                    </div>
-                  ))}
-                </div>
-
-                <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
-                  <div>
-                    <p className="text-sm text-muted leading-relaxed max-w-xl">
-                      Every piece of lumber tracked from arrival to installation.
-                      AI copilots at every decision point. Voice AI on the shop floor.
-                      One system that replaced Airtable, paper work orders, and three
-                      separate databases.
-                    </p>
+          {erpStudy && (
+            <FadeIn delay={0.3}>
+              <Link href={`/case-studies/${erpStudy.slug}`}>
+                <div className="mt-10 p-6 md:p-8 rounded-xl border border-accent/30 bg-card hover:bg-card-hover transition-all duration-300 group cursor-pointer">
+                  <div className="flex items-center gap-2 mb-6">
+                    <span className="text-xs font-mono text-accent">Full Custom ERP</span>
+                    <span className="text-xs text-muted/40">/</span>
+                    <span className="text-xs text-muted/60">8 departments</span>
+                    <span className="text-xs text-muted/40">/</span>
+                    <span className="text-xs text-muted/60">6 AI integrations</span>
                   </div>
-                  <span className="text-sm font-mono text-accent group-hover:text-accent-hover transition-colors shrink-0">
-                    Read the full story &rarr;
-                  </span>
+
+                  {/* Department grid */}
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
+                    {['Sales/CRM', 'Estimating', 'Engineering', 'Production', 'CNC', 'Procurement', 'Finishing', 'Maintenance'].map((dept) => (
+                      <div key={dept} className="px-3 py-2 rounded-lg border border-border bg-background/50 text-center">
+                        <span className="text-xs font-mono text-muted">{dept}</span>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
+                    <div>
+                      <p className="text-sm text-muted leading-relaxed max-w-xl">
+                        Every piece of lumber tracked from arrival to installation. AI
+                        copilots at every decision point. Voice AI on the shop floor. One
+                        system that replaced paper work orders, disconnected databases,
+                        and tribal knowledge.
+                      </p>
+                    </div>
+                    <span className="text-sm font-mono text-accent group-hover:text-accent-hover transition-colors shrink-0">
+                      Read the full story &rarr;
+                    </span>
+                  </div>
                 </div>
-              </div>
-            </Link>
-          </FadeIn>
+              </Link>
+            </FadeIn>
+          )}
         </div>
       </section>
 
-      {/* Other case studies */}
+      {/* The Systems Grid */}
       <section className="py-24 md:py-32 border-t border-border">
         <div className="mx-auto max-w-6xl px-6">
           <FadeIn>
-            <SectionLabel label="The Systems" />
+            <SectionLabel label="The systems" />
           </FadeIn>
           <FadeIn delay={0.1}>
             <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
-                What plugs into it.
+              <h2 className="text-3xl md:text-4xl font-bold tracking-tight max-w-2xl">
+                Every department. Every process.
+                <br />
+                <span className="text-muted">Custom-built. In production.</span>
               </h2>
               <Link
                 href="/case-studies"
@@ -227,17 +267,17 @@ export default function Home() {
             </div>
           </FadeIn>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {caseStudies.filter(s => !s.featured).map((study, i) => (
-              <FadeIn key={study.slug} delay={i * 0.1}>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {systemStudies.map((study, i) => (
+              <FadeIn key={study.slug} delay={i * 0.08}>
                 <Link href={`/case-studies/${study.slug}`}>
                   <article className="group relative p-6 rounded-xl border border-border bg-card hover:bg-card-hover transition-all duration-300 hover:border-accent/30 h-full flex flex-col">
                     <div className="flex items-center gap-2 mb-4">
-                      <span className="text-xs font-mono text-accent">
+                      <span className="text-[10px] font-mono uppercase tracking-wider px-2 py-1 rounded-full bg-accent/10 text-accent">
                         {study.category}
                       </span>
                       {study.status !== 'live' && (
-                        <span className="ml-auto text-xs font-mono px-2 py-0.5 rounded-full bg-accent/10 text-accent">
+                        <span className="ml-auto text-[10px] font-mono px-2 py-0.5 rounded-full bg-muted/10 text-muted">
                           {study.status}
                         </span>
                       )}
@@ -245,16 +285,21 @@ export default function Home() {
                     <h3 className="text-lg font-semibold mb-2 group-hover:text-accent transition-colors">
                       {study.title}
                     </h3>
-                    <p className="text-sm text-muted leading-relaxed flex-1">
+                    <p className="text-sm text-muted leading-relaxed flex-1 line-clamp-3">
                       {study.subtitle}
                     </p>
-                    <div className="mt-6 pt-4 border-t border-border">
-                      <p className="text-2xl font-bold">
-                        {study.heroStat.value}
-                      </p>
-                      <p className="text-xs text-muted mt-0.5">
-                        {study.heroStat.label}
-                      </p>
+                    <div className="mt-6 pt-4 border-t border-border flex items-end justify-between">
+                      <div>
+                        <p className="text-2xl font-bold">
+                          {study.heroStat.value}
+                        </p>
+                        <p className="text-xs text-muted mt-0.5">
+                          {study.heroStat.label}
+                        </p>
+                      </div>
+                      <span className="text-xs font-mono text-accent opacity-0 group-hover:opacity-100 transition-opacity">
+                        &rarr;
+                      </span>
                     </div>
                   </article>
                 </Link>
@@ -264,72 +309,63 @@ export default function Home() {
         </div>
       </section>
 
-      {/* The approach teaser */}
+      {/* The Connected Brain */}
       <section className="py-24 md:py-32 border-t border-border relative overflow-hidden">
         <div className="absolute inset-0 grid-bg opacity-20" />
         <div className="relative z-10 mx-auto max-w-6xl px-6">
           <FadeIn>
-            <SectionLabel label="The approach" />
+            <SectionLabel label="The connected brain" />
           </FadeIn>
           <FadeIn delay={0.1}>
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight max-w-3xl">
-              AI agents that actually ship.
+              Not a collection of apps.
               <br />
-              <span className="text-muted">Not slides about AI. Not pilots. Production systems.</span>
+              <span className="gradient-text">One intelligence.</span>
             </h2>
           </FadeIn>
           <FadeIn delay={0.2}>
             <p className="mt-6 text-muted max-w-2xl leading-relaxed">
-              I run a fleet of specialized AI agents that handle everything from
-              code deployment to meeting analysis to CNC validation. Each agent
-              has a role. Each role has boundaries. The system improves itself
-              with every task.
+              Every system on this page feeds into the next. Data flows across
+              departments without re-entry, without phone calls, without someone
+              remembering to update a spreadsheet.
             </p>
           </FadeIn>
 
           <FadeIn delay={0.3}>
-            {/* Terminal-style preview */}
-            <div className="mt-12 max-w-2xl rounded-xl border border-border bg-card overflow-hidden">
-              <div className="flex items-center gap-2 px-4 py-3 border-b border-border">
-                <div className="w-3 h-3 rounded-full bg-red-500/60" />
-                <div className="w-3 h-3 rounded-full bg-yellow-500/60" />
-                <div className="w-3 h-3 rounded-full bg-green-500/60" />
-                <span className="ml-2 text-xs text-muted font-mono">
-                  orchestrator
-                </span>
-              </div>
-              <div className="p-4 font-mono text-sm space-y-2">
-                <p className="text-muted">
-                  <span className="text-accent">$</span> /deploy cnc-validator
-                </p>
-                <p className="text-muted/60">
-                  Routing to developer agent...
-                </p>
-                <p className="text-muted/60">
-                  Running tests... <span className="text-green-400">12/12 passed</span>
-                </p>
-                <p className="text-muted/60">
-                  Creating PR #247... <span className="text-green-400">done</span>
-                </p>
-                <p className="text-muted/60">
-                  QA agent verifying... <span className="text-green-400">approved</span>
-                </p>
-                <p className="text-muted/60">
-                  Deploying to Railway... <span className="text-green-400">live</span>
-                </p>
-                <p className="text-foreground mt-2">
-                  Deployed cnc-validator v2.4.1 in 3m 22s
-                </p>
-              </div>
+            <div className="mt-12 max-w-2xl space-y-0">
+              {connectedBrainFlows.map((flow, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, x: -12 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true, margin: '-40px' }}
+                  transition={{ duration: 0.5, delay: 0.35 + i * 0.12 }}
+                  className="flex items-start gap-4 py-4 border-b border-border/50 last:border-b-0"
+                >
+                  <div className="mt-1.5 w-2 h-2 rounded-full bg-accent shrink-0" />
+                  <p className="text-base leading-relaxed">
+                    <span className="text-muted">{flow.trigger}</span>{' '}
+                    <span className="text-foreground font-medium">{flow.result}</span>
+                  </p>
+                </motion.div>
+              ))}
             </div>
           </FadeIn>
 
-          <FadeIn delay={0.4}>
+          <FadeIn delay={0.6}>
+            <p className="mt-10 text-sm text-muted/70 font-mono max-w-xl">
+              This isn&apos;t integration for integration&apos;s sake. Every connection
+              exists because someone used to pick up the phone, walk across the shop,
+              or re-enter data by hand. Now the system just knows.
+            </p>
+          </FadeIn>
+
+          <FadeIn delay={0.7}>
             <Link
               href="/stack"
               className="inline-flex items-center mt-8 text-sm font-mono text-accent hover:text-accent-hover transition-colors"
             >
-              See how it works &rarr;
+              See the architecture &rarr;
             </Link>
           </FadeIn>
         </div>
@@ -340,13 +376,16 @@ export default function Home() {
         <div className="mx-auto max-w-6xl px-6 text-center">
           <FadeIn>
             <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
-              Let&apos;s talk.
+              Want to see what this looks like
+              <br />
+              for your business?
             </h2>
           </FadeIn>
           <FadeIn delay={0.1}>
-            <p className="mt-4 text-muted max-w-xl mx-auto">
-              Whether you&apos;re building AI systems for manufacturing, curious about
-              the agent architecture, or just want to talk shop.
+            <p className="mt-6 text-muted max-w-xl mx-auto leading-relaxed">
+              Every system shown here is in production. This isn&apos;t a pitch deck.
+              Whether you&apos;re exploring AI for manufacturing, building custom tools,
+              or just want to understand what&apos;s actually possible — let&apos;s talk.
             </p>
           </FadeIn>
           <FadeIn delay={0.2}>
