@@ -42,9 +42,9 @@ const timeline = [
   },
   {
     year: '2026',
-    title: 'What comes next',
+    title: 'The explosion',
     description:
-      'Autonomous CNC programming. Deeper knowledge capture. The goal: 10x the capacity without losing an ounce of craft.',
+      '30+ production tools live. CRM, meeting management, accountability charts, work order automation, digital inspection, shop floor dispatch. 10 tools deployed in a single overnight session. The connected brain becomes real.',
   },
 ];
 
@@ -63,7 +63,7 @@ export default function AboutPage() {
         </FadeIn>
         <FadeIn delay={0.2}>
           <p className="mt-4 text-xl text-muted max-w-2xl leading-relaxed">
-            Third-generation leader of E.F. San Juan Inc.
+            Operations Manager at E.F. San Juan Inc.
             <br />
             Building AI systems for a company that builds things by hand.
           </p>
@@ -87,7 +87,7 @@ export default function AboutPage() {
           <FadeIn delay={0.1}>
             <div className="space-y-6 text-muted leading-relaxed">
               <p>
-                I run a 50-year-old custom millwork company in Santa Rosa Beach, Florida.
+                I&apos;m the Operations Manager of a 50-year-old custom millwork company in Santa Rosa Beach, Florida.
                 We build the kind of woodwork you find in luxury homes and
                 high-end commercial spaces: custom staircases, radius moldings,
                 architectural panels, hand-finished cabinetry.
@@ -162,11 +162,11 @@ export default function AboutPage() {
                 Building the Systems
               </h3>
               <ul className="space-y-2 text-sm text-muted">
-                <li>AI agent fleet architecture and deployment</li>
-                <li>Custom ERP and production management software</li>
-                <li>Voice AI for shop floor operations</li>
-                <li>CNC toolpath validation and automation</li>
-                <li>Knowledge capture and retrieval systems</li>
+                <li>30+ custom production tools — designed, built, and deployed</li>
+                <li>AI agent fleet architecture and parallel deployment</li>
+                <li>Full-stack custom ERP connecting 8 departments</li>
+                <li>Voice AI, CNC validation, digital inspection, shop floor dispatch</li>
+                <li>Knowledge capture, institutional expertise preservation</li>
               </ul>
             </div>
           </FadeIn>

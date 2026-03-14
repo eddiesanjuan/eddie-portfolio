@@ -8,8 +8,8 @@ import { caseStudies } from '@/data/case-studies';
 
 const stats = [
   { value: '50', suffix: ' yrs', label: 'of craftsmanship' },
-  { value: '16', suffix: '+', label: 'production tools deployed' },
-  { value: '12', suffix: '', label: 'AI-integrated systems' },
+  { value: '30', suffix: '+', label: 'production tools deployed' },
+  { value: '20', suffix: '+', label: 'AI-integrated systems' },
   { value: '1', suffix: '', label: 'connected brain' },
 ];
 
@@ -32,6 +32,22 @@ const connectedBrainFlows = [
   {
     trigger: 'When a work order is created,',
     result: 'every downstream system is ready.',
+  },
+  {
+    trigger: 'When Smart Dispatch assigns a job,',
+    result: 'the craftsman claims it from the kiosk.',
+  },
+  {
+    trigger: 'When Quality Gate flags a defect,',
+    result: 'the WO Engine adjusts the build sequence.',
+  },
+  {
+    trigger: 'When the CRM surfaces a follow-up risk,',
+    result: 'the sales rep gets a proactive nudge.',
+  },
+  {
+    trigger: 'When Nerve Center detects a bottleneck,',
+    result: 'every department sees the impact in real time.',
   },
 ];
 
@@ -132,6 +148,40 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Build Velocity */}
+      <section className="py-24 md:py-32 border-b border-border">
+        <div className="mx-auto max-w-6xl px-6">
+          <FadeIn>
+            <SectionLabel label="Build velocity" />
+          </FadeIn>
+          <FadeIn delay={0.1}>
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight max-w-3xl">
+              One operations manager.
+              <br />
+              <span className="text-muted">An AI agent fleet. This output.</span>
+            </h2>
+          </FadeIn>
+          <FadeIn delay={0.2}>
+            <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-8">
+              {[
+                { value: '30+', label: 'Production tools deployed', detail: 'All custom-built, all in production' },
+                { value: '10', label: 'Tools shipped in one night', detail: 'Single overnight build marathon' },
+                { value: '34', label: 'EFSJ GitHub repositories', detail: 'Every line of code owned' },
+                { value: '8', label: 'Departments connected', detail: 'Sales through installation' },
+              ].map((stat, i) => (
+                <FadeIn key={stat.label} delay={0.25 + i * 0.08}>
+                  <div className="p-4 rounded-xl border border-border bg-card">
+                    <p className="text-3xl md:text-4xl font-bold tracking-tight text-accent">{stat.value}</p>
+                    <p className="mt-2 text-sm font-medium text-foreground">{stat.label}</p>
+                    <p className="mt-1 text-xs text-muted">{stat.detail}</p>
+                  </div>
+                </FadeIn>
+              ))}
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
       {/* The Transformation Story */}
       <section className="py-24 md:py-32">
         <div className="mx-auto max-w-6xl px-6">
@@ -172,7 +222,7 @@ export default function Home() {
                   from first principles for custom manufacturing.
                 </p>
                 <p className="text-foreground leading-relaxed font-medium">
-                  The result: 16 production tools. 12 AI-integrated systems. One
+                  The result: 30+ production tools. 20+ AI-integrated systems. One
                   connected intelligence that gets smarter with every job.
                 </p>
               </div>
@@ -213,7 +263,7 @@ export default function Home() {
                     <span className="text-xs text-muted/40">/</span>
                     <span className="text-xs text-muted/60">8 departments</span>
                     <span className="text-xs text-muted/40">/</span>
-                    <span className="text-xs text-muted/60">6 AI integrations</span>
+                    <span className="text-xs text-muted/60">10 AI integrations</span>
                   </div>
 
                   {/* Department grid */}

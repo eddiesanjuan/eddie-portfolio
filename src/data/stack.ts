@@ -17,7 +17,7 @@ export const stackSections: StackSection[] = [
     id: 'connected-brain',
     title: 'The Connected Brain',
     description:
-      '16+ production tools operating as one interconnected intelligence system. Not separate apps. One nervous system. When VoxShop logs a defect, the Pricing Engine adjusts future estimates. When Takeoff measures a job, Drawing Intelligence already knows the specs. Every tool is an organ in a single brain — and the brain gets smarter with every job.',
+      '30+ production tools operating as one interconnected intelligence system. Not separate apps. One nervous system. When VoxShop logs a defect, the Pricing Engine adjusts future estimates. When Takeoff measures a job, Drawing Intelligence already knows the specs. Every tool is an organ in a single brain — and the brain gets smarter with every job.',
     items: [
       {
         title: 'One Brain, Not Sixteen Tools',
@@ -37,7 +37,7 @@ export const stackSections: StackSection[] = [
         description:
           'Every job that runs through E.F. San Juan makes the entire system smarter. Pricing gets more accurate. Estimates get tighter. Quality patterns emerge. This compounds forever and can never be replicated by a competitor starting from zero.',
         details: [
-          '200+ work orders per year, each generating 50+ connected data points across 9+ systems',
+          '200+ work orders per year, each generating 50+ connected data points across 19+ systems',
           '10,000+ connected data points per year feeding back into every tool',
           'After 5 years: 50,000+ data points no competitor will ever have',
           'Historical cost accuracy improves with every completed job',
@@ -76,6 +76,8 @@ export const stackSections: StackSection[] = [
           'Production Brain: Real-time production visibility — every work order, every station, every status, live',
           'Maintain: Equipment health tracking with predictive maintenance alerts and service history',
           'Craft Brain: 50 years of institutional knowledge accessible at every workstation — species properties, joinery specs, finishing protocols',
+          'Smart Dispatch: Digital work queue on wall-mounted kiosk displays — workers claim jobs, complete tasks, see material readiness',
+          'Quality Gate: Tablet-first digital inspections with photo documentation and AWI compliance',
         ],
         icon: 'factory',
       },
@@ -101,6 +103,10 @@ export const stackSections: StackSection[] = [
           'Custom ERP: The Airtable-based backbone connecting everything — project tracking, resource allocation, financial reporting, all in one integrated system',
           'Client Portal: Customer-facing project visibility — status updates, approval workflows, and document sharing without phone calls or emails',
           'Field Memory: Installation and site visit documentation — photos, notes, and punch lists that feed back into production quality loops',
+          'Nerve Center: Unified operations command center — CEO, PM, Shop Floor, Admin all see their tailored view of every active project',
+          'CRM: Task-based client relationship management — follow-up risk alerts, decision pressure, zero dropped touches',
+          'Heartbeat: Relationship health scoring with proactive action queue — at-risk clients surfaced before they go cold',
+          'Profit Autopsy: Job-by-job estimated vs actual analysis — the learning engine that makes every estimate more accurate',
         ],
         icon: 'operations',
       },
@@ -178,6 +184,8 @@ export const stackSections: StackSection[] = [
           '10 tools deployed in a single overnight build session. The Pricing Engine went from zero to production in one weekend. Drawing Intelligence shipped its first working version in 48 hours. This is what happens when the builder understands both the problem and the code.',
         details: [
           '10 production tools deployed in a single overnight marathon session',
+          '30+ tools deployed and maintained by one Operations Manager with AI agent fleet coordination',
+          'CRM, meeting management, accountability charts — concept to production in days, not months',
           'Pricing Engine: concept to production in one weekend sprint',
           'VoxShop: voice interface built and deployed with 389 correction mappings in days, not months',
           'Iteration speed measured in hours, not sprints or quarters',
